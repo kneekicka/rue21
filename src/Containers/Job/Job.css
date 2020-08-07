@@ -1,0 +1,25 @@
+.Job {
+  margin: 20px;
+}
+
+.Job-title {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.Job .input-group {
+  margin: 20px 0;
+}
+
+.Job h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.Job-showing {
+  text-align: left;
+}
+
+.Job-table {
+  text-align: left;
+}

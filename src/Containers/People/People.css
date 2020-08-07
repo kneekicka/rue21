@@ -1,0 +1,25 @@
+.People {
+  margin: 20px;
+}
+
+.People-title {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.People .input-group {
+  margin: 20px 0;
+}
+
+.People h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.People-showing {
+  text-align: left;
+}
+
+.People-table {
+  text-align: left;
+}
