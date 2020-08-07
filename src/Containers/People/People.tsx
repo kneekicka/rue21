@@ -7,8 +7,10 @@ import PeopleDropDown from "../../Components/PeopleDropdown/PeopleDropdown";
 // @ts-ignore
 import IPerson from "../../Models/Person.model";
 import mockedPeople from "../../MockData/people";
+import { useLocation } from "react-router-dom";
 
 const People = () => {
+  const location = useLocation();
   const [people, setPeople] = useState<IPerson[]>([]);
   const [displayPeople, setDisplayPeople] = useState<IPerson[]>([]);
   const [loading, setLoading] = useState(false);
@@ -18,7 +20,7 @@ const People = () => {
   useEffect(() => {
     const fetchPeople = async () => {
       setLoading(true);
-      const res = await mockedPeople;
+      const res = location.state.people;
       setPeople(res);
       setDisplayPeople(res);
       setLoading(false);

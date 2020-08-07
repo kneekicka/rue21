@@ -7,8 +7,10 @@ import PeopleDropDown from "../../Components/PeopleDropdown/PeopleDropdown";
 // @ts-ignore
 import IJob from "../../Models/Job.model";
 import mockedJobs from "../../MockData/jobs";
+import { useLocation } from "react-router-dom";
 
 const Job = () => {
+  const location = useLocation();
   const [job, setJob] = useState<IJob[]>([]);
   const [displayJob, setDisplayJob] = useState<IJob[]>([]);
   const [loading, setLoading] = useState(false);
@@ -18,7 +20,7 @@ const Job = () => {
   useEffect(() => {
     const fetchJob = async () => {
       setLoading(true);
-      const res = await mockedJobs;
+      const res = location.state.jobs;
       setJob(res);
       setDisplayJob(res);
       setLoading(false);

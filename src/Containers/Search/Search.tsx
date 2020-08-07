@@ -2,38 +2,37 @@ import React from "react";
 import { Jumbotron, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Search.css";
 import api from "../../Services/api";
+import { useHistory } from "react-router-dom";
 
 const Search = () => {
+  const history = useHistory();
+
   const handleJobTitleSubmit = (event: any) => {
+    event.preventDefault();
     const form = event.currentTarget;
     api
       .get(`/search/job?title= ${form.formSearchJobTitle.value}`)
       .then((res) => {
-        console.log("res data", res.data);
+        history.push("/job", { jobs: res.data });
       })
       .catch((error) => {
         console.log("error", error);
       });
-    event.preventDefault();
-    event.stopPropagation();
   };
 
   const handlePersonSubmit = (event: any) => {
+    event.preventDefault();
     const form = event.currentTarget;
-    console.log("name", form.formSearchName.value);
-    console.log("email", form.formSearchEmail.value);
     api
       .get(
         `/search/job?name=${form.formSearchName.value}&email=${form.formSearchEmail.value}`
       )
       .then((res) => {
-        console.log("res data", res.data);
+        history.push("/people", { people: res.data });
       })
       .catch((error) => {
         console.log("error", error);
       });
-    event.preventDefault();
-    event.stopPropagation();
   };
 
   return (
