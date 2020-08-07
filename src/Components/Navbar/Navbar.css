@@ -1,0 +1,19 @@
+.Navbar-search-form {
+  margin-right: 2rem;
+}
+
+.Navbar-logout-button {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 768px) {
+  .Navbar-search-form,
+  .Navbar-logout-button {
+    margin: 10px 0;
+  }
+}
+
+.Navbar-link:hover{
+  cursor: pointer;
+}
