@@ -3,6 +3,8 @@ import { Jumbotron, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Search.css";
 import api from "../../Services/api";
 import { useHistory } from "react-router-dom";
+import mockedJobs from "../../MockData/jobs";
+import mockedPeople from "../../MockData/people";
 
 const Search = () => {
   const history = useHistory();

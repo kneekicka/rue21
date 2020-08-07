@@ -81,7 +81,7 @@ const People = () => {
 
   return (
     <div className="People">
-      <h3>Job</h3>
+      <h3>People</h3>
       <Row>
         <Col sm={9}>
           <div className="People-title">
