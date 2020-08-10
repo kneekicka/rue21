@@ -20,7 +20,7 @@ const Job = () => {
   useEffect(() => {
     const fetchJob = async () => {
       setLoading(true);
-      const res = location.state.jobs;
+      const res = mockedJobs;
       setJob(res);
       setDisplayJob(res);
       setLoading(false);

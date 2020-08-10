@@ -6,6 +6,8 @@ import NavBar from "./Components/Navbar/Navbar";
 import Search from "./Containers/Search/Search";
 import People from "./Containers/People/People";
 import Job from "./Containers/Job/Job";
+import JobSingle from "./Containers/JobSingle/JobSingle";
+import PersonSingle from "./Containers/PersonSingle/PersonSingle";
 
 const App = () => {
   return (
@@ -19,9 +21,17 @@ const App = () => {
           <NavBar />
           <People />
         </Route>
-        <Route path="/job">
+        <Route path="/jobs">
           <NavBar />
           <Job />
+        </Route>
+        <Route path="/job-profile/*">
+          <NavBar />
+          <JobSingle />
+        </Route>
+        <Route path="/person-profile/*">
+          <NavBar />
+          <PersonSingle />
         </Route>
         <Route path="/">
           <NavBar />
