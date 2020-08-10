@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="md">
       <Navbar.Brand onClick={goHome} className="Navbar-link">
-        Home
+        rue21
       </Navbar.Brand>
     </Navbar>
   );

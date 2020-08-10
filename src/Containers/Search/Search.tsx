@@ -1,14 +1,25 @@
-import React from "react";
-import { Jumbotron, Container, Row, Col, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Jumbotron,
+  Container,
+  Row,
+  Col,
+  Form,
+  Button,
+  Modal,
+} from "react-bootstrap";
 import "./Search.css";
 import api from "../../Services/api";
 import { useHistory } from "react-router-dom";
 import mockedJobs from "../../MockData/jobs";
 import mockedPeople from "../../MockData/people";
+import ModalContainer from "../../Components/Modal/Modal";
 
 const Search = () => {
   const history = useHistory();
+  const [showModal, setShowModal] = useState(false);
 
+  const handleClose = () => setShowModal(false);
   const handleJobTitleSubmit = (event: any) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -18,6 +29,7 @@ const Search = () => {
         history.push("/job", { jobs: res.data });
       })
       .catch((error) => {
+        setShowModal(true);
         console.log("error", error);
       });
   };
@@ -33,6 +45,7 @@ const Search = () => {
         history.push("/people", { people: res.data });
       })
       .catch((error) => {
+        setShowModal(true);
         console.log("error", error);
       });
   };
@@ -65,6 +78,7 @@ const Search = () => {
             </Form>
           </Col>
         </Row>
+        <ModalContainer show={showModal} onClose={handleClose} />
       </Container>
     </Jumbotron>
   );
