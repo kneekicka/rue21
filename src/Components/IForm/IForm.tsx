@@ -7,7 +7,7 @@ const IForm = (props: any) => {
     console.log("Pdf clicked");
   };
 
-  const downloadLink = `/person/downloadiForm?formId=${props.iForm.id}`;
+  const downloadLink = `http://localhost:8080/person/downloadiForm?formId=${props.iForm.id}`;
 
   return (
     <tr>
