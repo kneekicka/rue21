@@ -1,12 +1,20 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import IForm from "../IForm/IForm";
+import "./PersonSIngleIforms.css";
 
 const PersonSingleIforms = (props: any) => {
   return (
     <>
       <h4>iForms</h4>
-      <Table className="Iforms-table" size="sm" striped bordered hover>
+      <Table
+        className="Iforms-table"
+        size="sm"
+        responsive
+        striped
+        bordered
+        hover
+      >
         <thead>
           <tr>
             <th>Form data id</th>

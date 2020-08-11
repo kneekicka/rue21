@@ -1,9 +1,13 @@
 import React from "react";
+import "./IForm.css";
+import { FaFilePdf } from "react-icons/fa";
 
 const IForm = (props: any) => {
   const handleOnClick = () => {
     console.log("Pdf clicked");
   };
+
+  const downloadLink = `/person/downloadiForm?formId=${props.iForm.id}`;
 
   return (
     <tr>
@@ -13,7 +17,11 @@ const IForm = (props: any) => {
       <td>{props.iForm.completedDate}</td>
       <td>{props.iForm.jobId}</td>
       <td>{props.iForm.jobTitle}</td>
-      <td>{props.iForm.jobTitle}</td>
+      <td className="IForm-link">
+        <a href={downloadLink} download>
+          <FaFilePdf />
+        </a>
+      </td>
     </tr>
   );
 };

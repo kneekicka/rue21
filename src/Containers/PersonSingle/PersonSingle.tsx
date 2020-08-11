@@ -5,6 +5,7 @@ import "./PersonSingle.css";
 import api from "../../Services/api";
 import PersonSingleDetail from "../../Components/PersonSingleDetail/PersonSIngleDetail";
 import PersonSingleIforms from "../../Components/PersonSingleIforms/PersonSIngleIforms";
+import PersonSingleWorkflows from "../../Components/PersonSingleWorkflows/PersonSIngleWorkflows";
 import mockedPerson from "../../MockData/person";
 
 const PersonSingle = () => {
@@ -56,6 +57,7 @@ const PersonSingle = () => {
           </Col>
           <Col sm={9}>
             <PersonSingleIforms iForms={iForms} />
+            <PersonSingleWorkflows workflows={workflows} />
           </Col>
         </Row>
       </Container>
