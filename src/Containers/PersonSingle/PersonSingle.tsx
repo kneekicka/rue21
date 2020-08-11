@@ -26,13 +26,9 @@ const PersonSingle = () => {
       setLoading(true);
       fetchPerson()
         .then((res: any) => {
-          console.log("res", res);
-          console.log("res.workflows", res.workflows);
-          console.log("res.iForms", res.iForms);
-
-          setPerson(res);
-          setWorflows(res.workflows);
-          setiForms(res.iForms);
+          setPerson(res.data);
+          setWorflows(res.dataworkflows);
+          setiForms(res.data.iForms);
           setLoading(false);
         })
         .catch((error) => {
