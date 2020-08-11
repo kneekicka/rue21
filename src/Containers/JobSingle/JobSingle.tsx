@@ -5,7 +5,6 @@ import "./JobSingle.css";
 import api from "../../Services/api";
 import JobSingleDetail from "../../Components/JobSingleDetail/JobSIngleDetail";
 import JobSingleCandidates from "../../Components/JobSingleCandidates/JobSIngleCandidates";
-import mockedJob from "../../MockData/job";
 
 const JobSingle = () => {
   const location = useLocation();
@@ -14,24 +13,25 @@ const JobSingle = () => {
   const [candidates, setCandidates]: any[] = useState([]);
 
   const fetchJob = () => {
-    //return api.get(`/job/profile?id=${location.state.id}`);
+    return api.get(`/job/profile?id=${location.state.id}`);
   };
 
   useEffect(() => {
     const getJob = async () => {
-      setJob(mockedJob);
+      /* setJob(mockedJob);
       setCandidates(mockedJob.candidates);
-      console.log("candidates", candidates);
-      /*setLoading(true);
+      console.log("candidates", candidates); */
+      setLoading(true);
       fetchJob()
-        .then((res) => {
-          setJob(res);
-          setCandidates(res.candidates);
+        .then((res: any) => {
+          setJob(res.jobProfile);
+          setCandidates(res.jobProfile.candidates);
+          setLoading(false);
         })
         .catch((error) => {
           console.log("error", error);
+          setLoading(false);
         });
-      setLoading(false);*/
     };
 
     getJob();

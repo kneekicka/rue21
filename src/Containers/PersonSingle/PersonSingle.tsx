@@ -6,7 +6,6 @@ import api from "../../Services/api";
 import PersonSingleDetail from "../../Components/PersonSingleDetail/PersonSIngleDetail";
 import PersonSingleIforms from "../../Components/PersonSingleIforms/PersonSIngleIforms";
 import PersonSingleWorkflows from "../../Components/PersonSingleWorkflows/PersonSIngleWorkflows";
-import mockedPerson from "../../MockData/person";
 
 const PersonSingle = () => {
   const location = useLocation();
@@ -16,28 +15,26 @@ const PersonSingle = () => {
   const [iForms, setiForms]: any[] = useState([]);
 
   const fetchPerson = () => {
-    //return api.get(`/person/profile?id=${location.state.id}`);
+    return api.get(`/person/profile?id=${location.state.id}`);
   };
 
   useEffect(() => {
     const getPerson = async () => {
-      setPerson(mockedPerson);
+      /* setPerson(mockedPerson);
       setWorflows(mockedPerson.workflows);
-      setiForms(mockedPerson.iForms);
-      console.log("person", person);
-      console.log("workflows", workflows);
-      console.log("iForms", iForms);
-      /*setLoading(true);
+      setiForms(mockedPerson.iForms); */
+      setLoading(true);
       fetchPerson()
-        .then((res) => {
-          setPerson(res);
-          setWorflows(res.workflows);
-          setiForms(res.iForms);
+        .then((res: any) => {
+          setPerson(res.personProfile);
+          setWorflows(res.personProfile.workflows);
+          setiForms(res.personProfile.iForms);
+          setLoading(false);
         })
         .catch((error) => {
           console.log("error", error);
+          setLoading(false);
         });
-      setLoading(false);*/
     };
 
     getPerson();

@@ -6,7 +6,6 @@ import PeoplePagination from "../../Components/Pagination/Pagination";
 import PeopleDropDown from "../../Components/PeopleDropdown/PeopleDropdown";
 // @ts-ignore
 import IPerson from "../../Models/Person.model";
-import mockedPeople from "../../MockData/people";
 import { useLocation } from "react-router-dom";
 
 const People = () => {
@@ -20,7 +19,7 @@ const People = () => {
   useEffect(() => {
     const fetchPeople = async () => {
       setLoading(true);
-      const res = mockedPeople;
+      const res = location.state.people;
       setPeople(res);
       setDisplayPeople(res);
       setLoading(false);

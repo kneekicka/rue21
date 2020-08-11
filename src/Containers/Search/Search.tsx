@@ -1,18 +1,8 @@
 import React, { useState } from "react";
-import {
-  Jumbotron,
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Modal,
-} from "react-bootstrap";
+import { Jumbotron, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Search.css";
 import api from "../../Services/api";
 import { useHistory } from "react-router-dom";
-import mockedJobs from "../../MockData/jobs";
-import mockedPeople from "../../MockData/people";
 import ModalContainer from "../../Components/Modal/Modal";
 
 const Search = () => {
@@ -24,9 +14,9 @@ const Search = () => {
     event.preventDefault();
     const form = event.currentTarget;
     api
-      .get(`/search/job?title= ${form.formSearchJobTitle.value}`)
-      .then((res) => {
-        history.push("/job", { jobs: res.data });
+      .get(`/searchBy/job?searchText=${form.formSearchJobTitle.value}`)
+      .then((res: any) => {
+        history.push("/jobs", { jobs: res.jobsTable });
       })
       .catch((error) => {
         setShowModal(true);
@@ -39,10 +29,10 @@ const Search = () => {
     const form = event.currentTarget;
     api
       .get(
-        `/search/job?name=${form.formSearchName.value}&email=${form.formSearchEmail.value}`
+        `/searchBy/person?textName=${form.formSearchName.value}&textEmail=${form.formSearchEmail.value}`
       )
-      .then((res) => {
-        history.push("/people", { people: res.data });
+      .then((res: any) => {
+        history.push("/people", { people: res.personsTable });
       })
       .catch((error) => {
         setShowModal(true);
