@@ -32,7 +32,7 @@ const Search = () => {
         `/searchBy/person?textName=${form.formSearchName.value}&textEmail=${form.formSearchEmail.value}`
       )
       .then((res: any) => {
-        localStorage.setItem("rue21-people", JSON.stringify(res));
+        localStorage.setItem("rue21-people", JSON.stringify(res.data));
         history.push("/people");
       })
       .catch((error) => {
