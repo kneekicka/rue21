@@ -10,7 +10,7 @@ const Person = (props: any) => {
 
   return (
     <tr>
-      <td>{props.person.personId}</td>
+      <td>{props.person.id}</td>
       <td>{props.person.externalId}</td>
       <td>{props.person.folder}</td>
       <td>

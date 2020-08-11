@@ -120,7 +120,7 @@ const People = () => {
         </thead>
         <tbody>
           {currentPeople.map((person) => (
-            <Person key={person.personId} person={person} />
+            <Person key={person.id} person={person} />
           ))}
         </tbody>
         <thead>
