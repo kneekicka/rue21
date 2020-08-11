@@ -7,7 +7,7 @@ const Workflow = (props: any) => {
   const handleOnClick = (e) => {
     e.preventDefault();
     history.push(`/job-profile/${props.workflow.jobId}`, {
-      id: props.job.jobId,
+      id: props.workflow.jobId,
     });
   };
 
