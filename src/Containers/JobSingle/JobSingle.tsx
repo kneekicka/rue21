@@ -24,8 +24,8 @@ const JobSingle = () => {
       setLoading(true);
       fetchJob()
         .then((res: any) => {
-          setJob(res.jobProfile);
-          setCandidates(res.jobProfile.candidates);
+          setJob(res);
+          setCandidates(res.candidates);
           setLoading(false);
         })
         .catch((error) => {

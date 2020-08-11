@@ -16,7 +16,7 @@ const Search = () => {
     api
       .get(`/searchBy/job?searchText=${form.formSearchJobTitle.value}`)
       .then((res: any) => {
-        history.push("/jobs", { jobs: res.jobsTable });
+        history.push("/jobs", { jobs: res });
       })
       .catch((error) => {
         setShowModal(true);
@@ -32,7 +32,7 @@ const Search = () => {
         `/searchBy/person?textName=${form.formSearchName.value}&textEmail=${form.formSearchEmail.value}`
       )
       .then((res: any) => {
-        history.push("/people", { people: res.personsTable });
+        history.push("/people", { people: res });
       })
       .catch((error) => {
         setShowModal(true);
