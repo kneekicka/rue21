@@ -20,6 +20,7 @@ const People = () => {
     const fetchPeople = async () => {
       setLoading(true);
       const getPeople: any = localStorage.getItem("rue21-people");
+      console.log("getPeople", getPeople);
       const res = JSON.parse(getPeople);
       setPeople(res);
       setDisplayPeople(res);
