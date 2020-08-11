@@ -10,8 +10,8 @@ import { useLocation } from "react-router-dom";
 
 const People = () => {
   const location = useLocation();
-  const [people, setPeople] = useState<IPerson[]>([]);
-  const [displayPeople, setDisplayPeople] = useState<IPerson[]>([]);
+  const [people, setPeople] = useState<any>([]);
+  const [displayPeople, setDisplayPeople] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [peoplePerPage, setPeoplePerPage] = useState(10);
@@ -19,7 +19,8 @@ const People = () => {
   useEffect(() => {
     const fetchPeople = async () => {
       setLoading(true);
-      const res = location.state.people;
+      const getPeople: any = localStorage.getItem("rue21-people");
+      const res = JSON.parse(getPeople);
       setPeople(res);
       setDisplayPeople(res);
       setLoading(false);

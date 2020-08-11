@@ -32,7 +32,8 @@ const Search = () => {
         `/searchBy/person?textName=${form.formSearchName.value}&textEmail=${form.formSearchEmail.value}`
       )
       .then((res: any) => {
-        history.push("/people", { people: res });
+        localStorage.setItem("rue21-people", JSON.stringify(res));
+        history.push("/people");
       })
       .catch((error) => {
         setShowModal(true);
