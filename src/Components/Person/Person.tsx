@@ -15,7 +15,7 @@ const Person = (props: any) => {
       <td>{props.person.folder}</td>
       <td>
         <a href="#" onClick={handleOnClick}>
-          {props.person.name}
+          {props.person.fullName}
         </a>
       </td>
       <td>{props.person.email}</td>
