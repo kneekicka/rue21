@@ -77,7 +77,7 @@ const Job = () => {
 
   return (
     <div className="Job">
-      <h3>Job</h3>
+      <h3>Jobs</h3>
       <Row>
         <Col sm={9}>
           <div className="Job-title">
@@ -105,9 +105,9 @@ const Job = () => {
       <Table className="Job-table" size="sm" striped bordered hover>
         <thead>
           <tr>
-            <th>JobID</th>
-            <th>JobTitle</th>
-            <th>CreatedDate</th>
+            <th>Job id</th>
+            <th>Job title</th>
+            <th>Created date</th>
             <th>Folder</th>
             <th>State</th>
           </tr>
@@ -119,9 +119,9 @@ const Job = () => {
         </tbody>
         <thead>
           <tr>
-            <th>JobID</th>
-            <th>JobTitle</th>
-            <th>CreatedDate</th>
+            <th>Job id</th>
+            <th>Job title</th>
+            <th>Created date</th>
             <th>Folder</th>
             <th>State</th>
           </tr>

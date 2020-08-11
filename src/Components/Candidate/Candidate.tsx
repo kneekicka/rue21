@@ -1,11 +1,10 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import "./Candidate.css";
 
 const Candidate = (props: any) => {
   const history = useHistory();
-  const handleOnClick = () => {
-    console.log("Person name clicked");
+  const handleOnClick = (e) => {
+    e.preventDefault();
     history.push(`/person-profile/${props.candidate.personId}`, {
       id: props.candidate.personId,
     });
@@ -14,8 +13,10 @@ const Candidate = (props: any) => {
   return (
     <tr>
       <td>{props.candidate.personId}</td>
-      <td className="candidate-clickable" onClick={handleOnClick}>
-        {props.candidate.fullName}
+      <td>
+        <a href="#" onClick={handleOnClick}>
+          {props.candidate.fullName}
+        </a>
       </td>
       <td>{props.candidate.appliedDate}</td>
       <td>{props.candidate.status}</td>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
 import Candidate from "../Candidate/Candidate";
-import mockedJobs from "../../MockData/jobs";
 
 const JobSingleCandidates = (props: any) => {
   return (

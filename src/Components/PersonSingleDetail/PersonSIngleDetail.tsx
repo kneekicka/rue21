@@ -10,11 +10,21 @@ const PersonSingleDetail = (props: any) => {
         <ListGroup.Item>External id: {props.person.externalId}</ListGroup.Item>
         <ListGroup.Item>Folder: {props.person.folder}</ListGroup.Item>
         <ListGroup.Item>First name: {props.person.firstName}</ListGroup.Item>
-        <ListGroup.Item>Middle name: {props.person.middleName}</ListGroup.Item>
+        {props.person.middleName && (
+          <ListGroup.Item>
+            Middle name: {props.person.middleName}
+          </ListGroup.Item>
+        )}
         <ListGroup.Item>Last name: {props.person.lastName}</ListGroup.Item>
         <ListGroup.Item>Email: {props.person.email}</ListGroup.Item>
         <ListGroup.Item>Gender: {props.person.gender}</ListGroup.Item>
         <ListGroup.Item>Race: {props.person.race}</ListGroup.Item>
+        {props.person.disability && (
+          <ListGroup.Item>Disability: {props.person.disability}</ListGroup.Item>
+        )}
+        {props.person.veteran && (
+          <ListGroup.Item>Veteran: {props.person.veteran}</ListGroup.Item>
+        )}
         <ListGroup.Item>
           Created date: {props.person.createdDate}
         </ListGroup.Item>
@@ -22,6 +32,9 @@ const PersonSingleDetail = (props: any) => {
           Updated date: {props.person.updatedDate}
         </ListGroup.Item>
         <ListGroup.Item>Street: {props.person.street}</ListGroup.Item>
+        {props.person.street2 && (
+          <ListGroup.Item>Street 2: {props.person.street2}</ListGroup.Item>
+        )}
         <ListGroup.Item>City: {props.person.city}</ListGroup.Item>
         <ListGroup.Item>Zip: {props.person.zip}</ListGroup.Item>
         <ListGroup.Item>Country: {props.person.country}</ListGroup.Item>

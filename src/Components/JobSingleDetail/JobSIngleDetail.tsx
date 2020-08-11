@@ -32,7 +32,9 @@ const JobSingleDetail = (props: any) => {
         <ListGroup.Item>External id: {props.job.externalId}</ListGroup.Item>
         <ListGroup.Item>Folder: {props.job.folder}</ListGroup.Item>
         <ListGroup.Item>Street: {props.job.street}</ListGroup.Item>
-        <ListGroup.Item>Street 2: {props.job.street2}</ListGroup.Item>
+        {props.job.street2 && (
+          <ListGroup.Item>Street 2: {props.job.street2}</ListGroup.Item>
+        )}
         <ListGroup.Item>City: {props.job.city}</ListGroup.Item>
         <ListGroup.Item>Zip: {props.job.zip}</ListGroup.Item>
         <ListGroup.Item>State: {props.job.state}</ListGroup.Item>

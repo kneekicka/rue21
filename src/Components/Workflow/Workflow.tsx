@@ -4,16 +4,19 @@ import "./Workflow.css";
 
 const Workflow = (props: any) => {
   const history = useHistory();
-  const handleOnClick = () => {
+  const handleOnClick = (e) => {
+    e.preventDefault();
     history.push(`/job-profile/${props.workflow.jobId}`);
   };
 
   return (
     <tr>
-      <td className="Workflow-clickable" onClick={handleOnClick}>
-        {props.workflow.jobId}
+      <td>{props.workflow.jobId}</td>
+      <td>
+        <a href="#" onClick={handleOnClick}>
+          {props.workflow.jobTitle}
+        </a>
       </td>
-      <td>{props.workflow.jobTitle}</td>
       <td>{props.workflow.appliedDate}</td>
       <td>{props.workflow.status}</td>
     </tr>

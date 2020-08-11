@@ -20,7 +20,7 @@ const People = () => {
   useEffect(() => {
     const fetchPeople = async () => {
       setLoading(true);
-      const res = location.state.people;
+      const res = mockedPeople;
       setPeople(res);
       setDisplayPeople(res);
       setLoading(false);
@@ -109,8 +109,8 @@ const People = () => {
       <Table className="People-table" size="sm" striped bordered hover>
         <thead>
           <tr>
-            <th>PersonID</th>
-            <th>ExternalID</th>
+            <th>Person id</th>
+            <th>External id</th>
             <th>Folder</th>
             <th>Name</th>
             <th>Email</th>
@@ -124,8 +124,8 @@ const People = () => {
         </tbody>
         <thead>
           <tr>
-            <th>PersonID</th>
-            <th>ExternalID</th>
+            <th>Person id</th>
+            <th>External id</th>
             <th>Folder</th>
             <th>Name</th>
             <th>Email</th>
