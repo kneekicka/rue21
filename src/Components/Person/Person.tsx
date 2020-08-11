@@ -5,7 +5,7 @@ const Person = (props: any) => {
   const history = useHistory();
   const handleOnClick = (e) => {
     e.preventDefault();
-    history.push(`/person-profile/${props.person.id}`);
+    history.push(`/person-profile/${props.person.id}`, { id: props.person.id });
   };
 
   return (
