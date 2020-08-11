@@ -27,7 +27,7 @@ const PersonSingle = () => {
       fetchPerson()
         .then((res: any) => {
           setPerson(res.data);
-          setWorflows(res.dataworkflows);
+          setWorflows(res.data.workflows);
           setiForms(res.data.iForms);
           setLoading(false);
         })
