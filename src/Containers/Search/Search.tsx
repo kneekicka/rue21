@@ -35,8 +35,7 @@ const Search = () => {
         history.push("/people", { people: res });
       })
       .catch((error) => {
-        setShowModal(true);
-        console.log("error", error);
+        history.push("/people", { people: res });
       });
   };
 
