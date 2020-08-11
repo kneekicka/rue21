@@ -16,7 +16,8 @@ const Search = () => {
     api
       .get(`/searchBy/job?searchText=${form.formSearchJobTitle.value}`)
       .then((res: any) => {
-        history.push("/jobs", { jobs: res });
+        localStorage.setItem("rue21-jobs", JSON.stringify(res.data));
+        history.push("/jobs");
       })
       .catch((error) => {
         setShowModal(true);

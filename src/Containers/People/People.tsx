@@ -4,8 +4,6 @@ import "./People.css";
 import Person from "../../Components/Person/Person";
 import PeoplePagination from "../../Components/Pagination/Pagination";
 import PeopleDropDown from "../../Components/PeopleDropdown/PeopleDropdown";
-// @ts-ignore
-import IPerson from "../../Models/Person.model";
 import { useLocation } from "react-router-dom";
 
 const People = () => {
@@ -20,7 +18,6 @@ const People = () => {
     const fetchPeople = async () => {
       setLoading(true);
       const getPeople: any = localStorage.getItem("rue21-people");
-      console.log("getPeople", getPeople);
       const res = JSON.parse(getPeople);
       setPeople(res);
       setDisplayPeople(res);

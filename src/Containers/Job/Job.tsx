@@ -19,7 +19,8 @@ const Job = () => {
   useEffect(() => {
     const fetchJob = async () => {
       setLoading(true);
-      const res = location.state.jobs;
+      const getJobs: any = localStorage.getItem("rue21-jobs");
+      const res = JSON.parse(getJobs);
       setJob(res);
       setDisplayJob(res);
       setLoading(false);
