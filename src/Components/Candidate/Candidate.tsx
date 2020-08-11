@@ -5,14 +5,14 @@ const Candidate = (props: any) => {
   const history = useHistory();
   const handleOnClick = (e) => {
     e.preventDefault();
-    history.push(`/person-profile/${props.candidate.personId}`, {
-      id: props.candidate.personId,
+    history.push(`/person-profile/${props.candidate.id}`, {
+      id: props.candidate.id,
     });
   };
 
   return (
     <tr>
-      <td>{props.candidate.personId}</td>
+      <td>{props.candidate.id}</td>
       <td>
         <a href="#" onClick={handleOnClick}>
           {props.candidate.fullName}
