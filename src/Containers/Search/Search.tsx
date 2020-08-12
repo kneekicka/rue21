@@ -16,11 +16,14 @@ const Search = () => {
     api
       .get(`/searchBy/job?searchText=${form.formSearchJobTitle.value}`)
       .then((res: any) => {
-        localStorage.setItem("rue21-jobs", JSON.stringify(res.data));
-        history.push("/jobs");
+        if (res.data.length == 0) {
+          setShowModal(true);
+        } else {
+          localStorage.setItem("rue21-jobs", JSON.stringify(res.data));
+          history.push("/jobs");
+        }
       })
       .catch((error) => {
-        setShowModal(true);
         console.log("error", error);
       });
   };
@@ -33,11 +36,14 @@ const Search = () => {
         `/searchBy/person?textName=${form.formSearchName.value}&textEmail=${form.formSearchEmail.value}`
       )
       .then((res: any) => {
-        localStorage.setItem("rue21-people", JSON.stringify(res.data));
-        history.push("/people");
+        if (res.data.length == 0) {
+          setShowModal(true);
+        } else {
+          localStorage.setItem("rue21-people", JSON.stringify(res.data));
+          history.push("/people");
+        }
       })
       .catch((error) => {
-        setShowModal(true);
         console.log("error", error);
       });
   };

@@ -1,8 +1,4 @@
 .Iforms-table {
-    height: 400px;
-    overflow: auto;
-}
-
-.table-responsive {
     max-height: 400px;
+    overflow: auto;
 }
