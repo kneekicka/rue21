@@ -8,6 +8,14 @@ const JobItem = (props: any) => {
     history.push(`/job-profile/${props.job.id}`, { id: props.job.id });
   };
 
+  const returnState = (state) => {
+    if (state === false || state === true) {
+      return state.toString();
+    } else {
+      return "";
+    }
+  };
+
   return (
     <tr>
       <td>{props.job.id}</td>
@@ -18,7 +26,7 @@ const JobItem = (props: any) => {
       </td>
       <td>{props.job.createdDate}</td>
       <td>{props.job.folder}</td>
-      <td>{props.job.state.toString()}</td>
+      <td>{returnState(props.job.state)}</td>
     </tr>
   );
 };

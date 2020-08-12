@@ -47,10 +47,10 @@ const Job = () => {
 
     const filteredJob = currentJob.filter((job) => {
       return (
-        escape(job.jobId.toString()).includes(searchTerm) ||
-        escape(job.jobTitle.toLowerCase()).includes(searchTerm) ||
-        escape(job.createdDate).includes(searchTerm) ||
-        escape(job.folder.toLowerCase()).includes(searchTerm)
+        escape((job.id || "").toString()).includes(searchTerm) ||
+        escape((job.title || "").toLowerCase()).includes(searchTerm) ||
+        escape(job.createdDate || "").includes(searchTerm) ||
+        escape((job.folder || "").toLowerCase()).includes(searchTerm)
       );
     });
 
@@ -114,7 +114,7 @@ const Job = () => {
         </thead>
         <tbody>
           {currentJob.map((job) => (
-            <JobItem key={job.jobId} job={job} />
+            <JobItem key={job.id} job={job} />
           ))}
         </tbody>
         <thead>

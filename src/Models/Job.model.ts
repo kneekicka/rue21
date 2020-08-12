@@ -1,6 +1,6 @@
 interface IJob {
-  jobId: number;
-  jobTitle: string;
+  id: number;
+  title: string;
   createdDate: string;
   folder: string;
   state: boolean;

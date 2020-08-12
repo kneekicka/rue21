@@ -46,11 +46,11 @@ const mockedPerson = {
   iForms: [
     {
       id: 1234,
-      text: "Some Test Form Number 1234",
-      status: "Complete",
-      completedDate: "Aug 9, 2020 2:00:00 AM",
-      jobId: 101,
-      jobTitle: "Part Time Tester",
+      text: null,
+      status: null,
+      completedDate: null,
+      jobId: null,
+      jobTitle: null,
     },
     {
       id: 2345,

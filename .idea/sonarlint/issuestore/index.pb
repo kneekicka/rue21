@@ -1,0 +1,85 @@
+
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+=
+tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
+P
+ src/Components/Navbar/Navbar.css,b/1/b15a844ce4f41d8f0d8fc93881c431d38c8fbb1f
+P
+ src/Containers/Search/Search.css,5/6/563b0e59dc4c0612d81c3dd8bc064135389a0fcf
+P
+ src/Containers/People/People.css,a/b/ab6fd99cb2bde8ec5b842a9e5c3a1b49b14f16e5
+J
+src/Models/Person.model.ts,6/4/6417ab263ca93ebc7c05be2b1188c83812476fca
+X
+(src/Components/Pagination/Pagination.css,a/4/a4e5e1b93e8f7788f1169337336a8dd53cce852c
+X
+(src/Components/Pagination/Pagination.tsx,f/a/fa2000a68d5f110d6846b16b1d3323549be4a32a
+G
+src/Models/Job.model.ts,1/1/1141eb8ea184e2a1a8fccae322a278b4b7790308
+@
+build/index.html,9/9/990a85f5e72fc21bd93d9e8ddb10d110045a91c8
+N
+src/Components/Modal/Modal.tsx,7/2/72531f7487368defe2eda9f73f6389fbf8a9b7d7
+J
+src/Containers/Job/Job.css,b/a/ba464962a162bb5a42226296c49a451be5967274
+V
+&src/Containers/JobSingle/JobSingle.css,d/3/d3cb2fddf136dd9f6bc32c277912f9560fdca762
+\
+,src/Containers/PersonSingle/PersonSingle.css,d/5/d5e13758647bd153dfb21f05314b9843b66b8b27
+N
+src/Components/IForm/IForm.css,6/7/67fb0abb9fb146e25ae9c12ede5b94af7d65dd9b
+P
+ src/Components/Navbar/Navbar.tsx,3/c/3c95a1687cd51834572e9c6855cfda9d1402ca28
+j
+:src/Components/JobSingleCandidates/JobSIngleCandidates.tsx,3/c/3c0f769684242c72079af898daf5a26e92e2f030
+b
+2src/Components/JobSingleDetail/JobSIngleDetail.tsx,d/f/df20a3c0e251325b87156c7491e6f4fcea656e96
+T
+$src/Components/Workflow/Workflow.css,4/e/4e01c2c34d4ff2493de76faa459dfab725acd1c3
+D
+src/MockData/jobs.ts,0/c/0c4f25177afbd77688f80bc2bea71465f92043f3
+h
+8src/Components/PersonSingleDetail/PersonSIngleDetail.tsx,9/8/980d007db910202f5c41fba0c0f87641e70b279a
+V
+&src/Components/Candidate/Candidate.tsx,8/d/8d4b031e4fb9ab23c949d30359644ba3c115adcc
+;
+src/App.tsx,8/3/835da56f32df714aaed6285a5b7fc3a7807851e4
+A
+public/index.html,f/4/f43ecdf8d666ee908aacce037b4cd72159e4741b
+T
+$src/Components/Workflow/Workflow.tsx,f/7/f75d9b6c8643878ef3865d2fe830200880818e65
+P
+ src/Components/Person/Person.tsx,6/6/6663d4682706ddffd17379f897e67faea804b3fe
+R
+"src/Components/JobItem/JobItem.tsx,b/1/b1fbf7190b6cd6c11a0ca814bca1910ea0dea0c4
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+C
+src/Services/api.ts,a/3/a3a9b261b06630c4b9f103acf8055227663968b3
+C
+src/MockData/job.ts,b/f/bf6370d62cde75a617076dee962eff59212410a2
+F
+src/MockData/people.ts,4/e/4ea0ef0b39b8971315e697718f0c7e546a00a679
+J
+src/Containers/Job/Job.tsx,e/4/e40b8f17419f204a28e62f0693ceedfbce9cf5d2
+F
+src/MockData/person.ts,8/1/815e8fbbf76dc6dce927453f7c0fe518ccc7d0ed
+n
+>src/Components/PersonSingleWorkflows/PersonSIngleWorkflows.tsx,5/0/50e1fcb64c2b0501e669cf63003eeef2b963f8fd
+n
+>src/Components/PersonSingleWorkflows/PersonSIngleWorkflows.css,5/f/5f927b24f436de24b51c4d71b1dfa7fb49d1b313
+h
+8src/Components/PersonSingleIforms/PersonSIngleIforms.css,4/2/42902a71fa2c34d19a601fba2d97e1a6e46cf015
+P
+ src/Containers/People/People.tsx,f/1/f1d75189d8b5feb056f52179783e93bcd70439a6
+h
+8src/Components/PersonSingleIforms/PersonSIngleIforms.tsx,1/e/1eac16235305b19808c259cf0f9600c45d4a0912
+V
+&src/Containers/JobSingle/JobSingle.tsx,2/9/2914ec8231cb1cd328bf0fd964623153f85f447d
+N
+src/Components/IForm/IForm.tsx,1/2/12502cca461a02659e2b6e5f5cb0e791daa22e66
+\
+,src/Containers/PersonSingle/PersonSingle.tsx,4/c/4c547ad6e6849260623029a7fa1fc4ed9136c73a
+P
+ src/Containers/Search/Search.tsx,0/e/0e06e9a6fcb2387bab8c912dfbf8799b9cf62b0f

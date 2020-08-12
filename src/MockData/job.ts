@@ -2,10 +2,10 @@ const mockedJob = {
   candidates: [
     {
       personId: 2456,
-      fullName: "VeliaHaddox",
-      appliedDate: "Aug 9, 2020 2:00:00 AM",
-      status: "Start Manual Onboarding",
-      jobId: 0,
+      fullName: null,
+      appliedDate: null,
+      status: null,
+      jobId: null,
     },
     {
       personId: 2457,

@@ -45,11 +45,11 @@ const People = () => {
 
     const filteredPeople = currentPeople.filter((person) => {
       return (
-        escape(person.personId.toString()).includes(searchTerm) ||
-        escape(person.externalId.toString()).includes(searchTerm) ||
-        escape(person.folder.toLowerCase()).includes(searchTerm) ||
-        escape(person.name.toLowerCase()).includes(searchTerm) ||
-        escape(person.email.toLowerCase()).includes(searchTerm)
+        escape((person.id || "").toString()).includes(searchTerm) ||
+        escape((person.externalId || "").toString()).includes(searchTerm) ||
+        escape((person.folder || "").toLowerCase()).includes(searchTerm) ||
+        escape((person.name || "").toLowerCase()).includes(searchTerm) ||
+        escape((person.email || "").toLowerCase()).includes(searchTerm)
       );
     });
 

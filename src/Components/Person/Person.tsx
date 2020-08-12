@@ -8,6 +8,14 @@ const Person = (props: any) => {
     history.push(`/person-profile/${props.person.id}`, { id: props.person.id });
   };
 
+  const returnState = (state) => {
+    if (state === false || state === true) {
+      return state.toString();
+    } else {
+      return "";
+    }
+  };
+
   return (
     <tr>
       <td>{props.person.id}</td>
@@ -19,7 +27,7 @@ const Person = (props: any) => {
         </a>
       </td>
       <td>{props.person.email}</td>
-      <td>{props.person.state.toString()}</td>
+      <td>{returnState(props.person.state)}</td>
     </tr>
   );
 };
