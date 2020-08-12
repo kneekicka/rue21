@@ -1,47 +1,34 @@
 import React from "react";
-import { Pagination } from "react-bootstrap";
 import "./Pagination.css";
+import ReactPaginate from "react-paginate";
 
 const PeoplePagination = (props: any) => {
-  const pageNumbers: any[] = [];
-
-  for (
-    let number = 1;
-    number <= Math.ceil(props.totalItems / props.itemsPerPage);
-    number++
-  ) {
-    pageNumbers.push(
-      <Pagination.Item
-        onClick={() => {
-          props.paginate(number);
-        }}
-        key={number}
-        active={number === props.active}
-      >
-        {number}
-      </Pagination.Item>
-    );
-  }
+  const handlePageClick = (data) => {
+    props.paginate(data.selected + 1);
+  };
 
   return (
     <div className="Items-pagination">
-      <Pagination>
-        <Pagination.Prev
-          disabled={props.active - 1 === 0}
-          onClick={() => {
-            props.paginate(props.active - 1);
-          }}
-        />
-        {pageNumbers}
-        <Pagination.Next
-          disabled={
-            props.active + 1 > Math.ceil(props.totalItems / props.itemsPerPage)
-          }
-          onClick={() => {
-            props.paginate(props.active + 1);
-          }}
-        />
-      </Pagination>
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={">"}
+        breakLabel={"..."}
+        pageCount={Math.ceil(props.totalItems / props.itemsPerPage)}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        pageClassName={"page-item"}
+        nextClassName={"page-item"}
+        previousClassName={"page-item"}
+        previousLinkClassName={"page-link"}
+        nextLinkClassName={"page-link"}
+        pageLinkClassName={"page-link"}
+        breakClassName={"page-item"}
+        breakLinkClassName={"page-link"}
+        activeClassName={"active"}
+        forcePage={props.active - 1}
+      />
     </div>
   );
 };
