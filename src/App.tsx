@@ -6,6 +6,9 @@ import NavBar from "./Components/Navbar/Navbar";
 import Search from "./Containers/Search/Search";
 import People from "./Containers/People/People";
 import Job from "./Containers/Job/Job";
+import Login from "./Containers/Login/Login";
+import Password from "./Containers/Password/Password";
+import ManageUsers from "./Containers/ManageUsers/ManageUsers";
 import JobSingle from "./Containers/JobSingle/JobSingle";
 import PersonSingle from "./Containers/PersonSingle/PersonSingle";
 
@@ -13,6 +16,18 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/login">
+          <NavBar />
+          <Login />
+        </Route>
+        <Route path="/password">
+          <NavBar />
+          <Password />
+        </Route>
+        <Route path="/manage-users">
+          <NavBar />
+          <ManageUsers />
+        </Route>
         <Route path="/home">
           <NavBar />
           <Search />
@@ -35,7 +50,7 @@ const App = () => {
         </Route>
         <Route path="/">
           <NavBar />
-          <Search />
+          <Login />
         </Route>
       </Switch>
     </Router>
